@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+#virtualenv
+recipe_env
+
+#Django stuff:
+*.log
+local_settings.py
+
+#Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+.vscode
+
+.DS_Store
+*.sqlite3
+media/
+*.pyc
+*.db
+*.pid
