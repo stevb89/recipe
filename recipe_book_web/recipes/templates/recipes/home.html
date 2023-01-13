@@ -3,5 +3,28 @@
 Home
 {% endblock %}
 {% block content %}
-<p>ICT Warrior Academy</p>
+<h2>List of recipes</h2>
+{% if recipe_list %}
+<table class="recipe_list">
+<thead>
+<tr>
+…
+</tr>
+</thead>
+<tbody>
+{% for recipe in recipe_list %}
+<tr>
+    <td>{{ recipe.created | date:'d M Y' }}</td>
+    <td>{{ recipe.created | time:'H:i:s' }}</td>
+    <td>{{ recipe.name }}</td>
+    <td>{{ recipe.difficulty }}</td>
+    <td>{{ recipe.instructions }}</td>
+    <td>{{ recipe.hints }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% else %}
+    <p>No data found.</p>
+{% endif %}
 {% endblock %}
