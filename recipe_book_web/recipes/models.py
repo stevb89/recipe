@@ -25,3 +25,7 @@ class Ingredient(models.Model):
     name = models.CharField(verbose_name="Name des Zutat", max_length=20, help_text="Name der Zutat")
     quantity = models.DecimalField(verbose_name="Menge", max_digits=6, decimal_places=2, blank=True, null=True, help_text='Mengenangabe')
     recipe = models.ForeignKey(Recipe, default=None, blank=True, null=True, on_delete=models.SET_NULL)
+
+image = models.ImageField(upload_to='images',
+verbose_name="Bild", blank=True, null=True,
+help_text="illustrierendes Bild")

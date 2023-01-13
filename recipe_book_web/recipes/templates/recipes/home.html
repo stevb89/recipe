@@ -28,3 +28,8 @@ Home
     <p>No data found.</p>
 {% endif %}
 {% endblock %}
+{% if recipe.image %}
+<td><img src={{ recipe.image.url }}></td>
+{% else %
+<td></td>
+{% endif %}

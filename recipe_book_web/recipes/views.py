@@ -43,5 +43,5 @@ def enter_ingredient(request):
             ingredient = form.save(commit=False)
             ingredient.save()
             return redirect("home")
-        else:
-            return render(request, "recipes/enter_ingredient.html", {"form": form})
+    else:
+        return render(request, "recipes/enter_ingredient.html", {"form": form})
