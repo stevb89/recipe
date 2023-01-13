@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Recipe Book</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'recipes/site.css' %}" />
+    </head>
+    <body>  <!-- python code with {{...}} -->
+        <strong class='message'>Hello {{ name }}!</strong> It's {{ date | date:"l, d F, Y" }} at {{ date | time:"H:i:s" }}
+    </body>
+</html>
